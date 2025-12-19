@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tic-Tac-Toe
 
-## Getting Started
+Real-time multiplayer Tic-Tac-Toe with AI opponent support.
 
-First, run the development server:
+## Install
+
+```bash
+npm install
+```
+
+## Setup
+
+### Playing vs AI (LLM)
+
+Create a `.env.local` file in the project root:
+
+```dotenv
+OPENAI_API_KEY=sk-your-key-here
+```
+
+Get your API key from [platform.openai.com](https://platform.openai.com/api-keys)
+
+### Playing vs Friend (PvP)
+
+No API key needed for PvP mode.
+
+## Run
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Play
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### vs AI
 
-## Learn More
+1. Select "vs AI" mode
+2. Choose your model
+3. Click "Start Game"
+4. You are X, AI is O
+5. Click any cell to make your move
 
-To learn more about Next.js, take a look at the following resources:
+### vs Friend (PvP)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Select "vs Friend" mode
+2. Click "Start Game"
+3. Click "Copy invite link"
+4. Send the link to your friend
+5. **Important:** Your friend must open the link in an **incognito window** or **different browser** (same browser shares the same player ID)
+6. Once they join, the game begins
+7. Take turns clicking cells
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Vercel AI SDK
+- Server-Sent Events (SSE)
