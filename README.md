@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-Real-time multiplayer Tic-Tac-Toe with AI opponent support.
+Real time multiplayer Tic-Tac-Toe with AI opponent support.
 
 ## Install
 
